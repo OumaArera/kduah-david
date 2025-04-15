@@ -9,7 +9,7 @@ const values = [
   "T - Tenacity | We bring relentless energy, drive, and resolve to every challenge. Our work is fueled by purpose and dedication.",
   "I - Integrity | We uphold the highest ethical standards, doing what is right—even when it's not easy or convenient.",
   "O - Operational Excellence | We exceed expectations through discipline, innovation, and a commitment to continuous improvement.",
-  "N - Noble Impact | Our work is meaningful. We strive to leave a lasting, positive imprint on every life we touch."
+  "N - Noble Impact | Our work is meaningful. We strive to leave a lasting, positive imprint on every work we touch."
 ];
 
 const AboutSection = () => {
