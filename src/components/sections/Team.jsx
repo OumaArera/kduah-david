@@ -96,7 +96,7 @@ const TeamSection = () => {
         {/* Board of Directors */}
         <div className="mt-24">
           <div className="text-center mb-12">
-            <h3 className="text-2xl font-semibold text-blue-800 mb-4">Board of Directors</h3>
+            <h3 className="text-2xl font-semibold text-blue-800 mb-4">The Board of Directors</h3>
             <p className="text-gray-600 max-w-2xl mx-auto">
               Our esteemed Board of Directors provides strategic guidance ensuring we maintain our commitment to excellence and innovation.
             </p>
