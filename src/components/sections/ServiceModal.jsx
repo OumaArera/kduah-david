@@ -28,7 +28,7 @@ const ServiceModal = ({ serviceTitle, onClose }) => {
   const serviceIcon = iconMap[matched.serviceName || matched.name] || <FaQuestionCircle />;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
+    <div className="fixed top-20 inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
       <div className="relative w-full max-w-3xl bg-white rounded-3xl shadow-2xl animate-fadeIn ring-1 ring-blue-100 flex flex-col max-h-[90vh]">
         {/* Close Button */}
         <button
