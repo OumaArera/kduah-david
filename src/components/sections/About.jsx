@@ -75,7 +75,7 @@ const AboutSection = () => {
             </div>
             <div className="lg:w-3/4 lg:pl-10">
               <h3 className="text-3xl font-semibold text-blue-800 mb-2">Message from the CEO</h3>
-              <h4 className="text-xl font-medium text-orange-500 mb-4">Kwaku Duah Junior, Chief Executive Officer</h4>
+              <h4 className="text-xl font-medium text-orange-500 mb-4">Kwaku Duah Junior</h4>
               <p className="text-gray-700 mb-4 text-base leading-relaxed">
                 It is my pleasure to welcome you to Young Business Consult which is now KDuah and David Consult, registered in Ghana by the registrar general department.
                 KDuah and David Consult is a dynamic, result-oriented consulting firm, seeking to aid businesses in attaining realistic project needs.
