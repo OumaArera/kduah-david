@@ -63,7 +63,7 @@ const Header = ({ activeSection, setActiveSection }) => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center">
             <div className="flex space-x-1 bg-gray-100 px-2 py-1 rounded-full">
-              {['home', 'about', 'services', 'clients', 'team', 'contact'].map((item) => (
+              {['home', 'about', 'services', 'clients', 'team'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
@@ -78,16 +78,6 @@ const Header = ({ activeSection, setActiveSection }) => {
               ))}
             </div>
           </nav>
-
-          {/* Contact Button - For Desktop */}
-          <div className="hidden md:block">
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="bg-orange-500 hover:bg-orange-600 text-white py-2 px-6 rounded-full font-medium transition-colors duration-300 ml-6"
-            >
-              Get in Touch
-            </button>
-          </div>
 
           {/* Mobile Menu Toggle */}
           <div className="md:hidden flex items-center">
@@ -105,7 +95,7 @@ const Header = ({ activeSection, setActiveSection }) => {
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-100 px-6 pt-2 pb-4 shadow-inner">
           <div className="flex flex-col space-y-1">
-            {['home', 'about', 'services', 'clients', 'team', 'contact'].map((item) => (
+            {['home', 'about', 'services', 'clients', 'team'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
@@ -118,12 +108,6 @@ const Header = ({ activeSection, setActiveSection }) => {
                 {item.charAt(0).toUpperCase() + item.slice(1)}
               </button>
             ))}
-            <button 
-              onClick={() => scrollToSection('contact')}
-              className="bg-orange-500 hover:bg-orange-600 text-white py-3 px-4 rounded-lg font-medium transition-colors duration-300 mt-2"
-            >
-              Get in Touch
-            </button>
           </div>
         </div>
       )}

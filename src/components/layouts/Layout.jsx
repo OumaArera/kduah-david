@@ -39,11 +39,19 @@ export default function KduahConsultLandingPage() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  
-
   return (
-    <div className="font-sans min-h-screen bg-white">
+    <div className="font-sans min-h-screen bg-white relative">
       <Header activeSection={activeSection} setActiveSection={setActiveSection} />
+      
+      {/* Fixed Contact Us Button Overlay */}
+      <div className="fixed bottom-6 right-6 z-50">
+        <button 
+          onClick={() => scrollToSection('contact')}
+          className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-full shadow-lg transition-all duration-300 flex items-center"
+        >
+          Contact Us
+        </button>
+      </div>
       
       <section id="home" className="pt-24 md:pt-32 pb-16 md:pb-24 bg-gradient-to-br from-blue-900 to-blue-800">
         <div className="container mx-auto px-4 md:px-6">
@@ -63,10 +71,10 @@ export default function KduahConsultLandingPage() {
                   Our Services
                 </button>
                 <button 
-                  onClick={() => scrollToSection('contact')}
+                  onClick={() => scrollToSection('clients')}
                   className="bg-transparent hover:bg-blue-700 text-white font-semibold py-3 px-6 border border-white rounded-md transition-colors duration-300"
                 >
-                  Contact Us
+                  Our Clients
                 </button>
               </div>
             </div>
