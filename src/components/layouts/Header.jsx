@@ -83,7 +83,7 @@ const Header = ({ activeSection, setActiveSection }) => {
           <div className="md:hidden flex items-center">
             <button
               onClick={toggleMenu}
-              className="text-blue-800 p-2 rounded-full bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
+              className="text-blue-800 p-2 mr-3 rounded-full bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
@@ -93,7 +93,7 @@ const Header = ({ activeSection, setActiveSection }) => {
 
       {/* Mobile Navigation */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 px-6 pt-2 pb-4 shadow-inner">
+        <div className="md:hidden bg-white border-t border-gray-100 px-4 pt-2 pb-4 shadow-inner max-w-full overflow-x-hidden">
           <div className="flex flex-col space-y-1">
             {['home', 'about', 'services', 'clients', 'team'].map((item) => (
               <button
