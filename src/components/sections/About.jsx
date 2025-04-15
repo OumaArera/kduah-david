@@ -14,7 +14,7 @@ const values = [
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-gray-50 relative z-10">
       <div className="container mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="text-center mb-20">
