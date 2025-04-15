@@ -83,7 +83,7 @@ const Header = ({ activeSection, setActiveSection }) => {
           <div className="md:hidden flex items-center">
             <button
               onClick={toggleMenu}
-              className="text-blue-800 p-2 mr-3 rounded-full bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
+              className="text-blue-800 p-2 mr-4 rounded-full bg-gray-100 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-orange-500"
             >
               {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
