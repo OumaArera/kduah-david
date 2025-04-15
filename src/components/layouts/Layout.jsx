@@ -58,7 +58,7 @@ export default function KduahConsultLandingPage() {
           <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="w-full md:w-1/2 mb-10 md:mb-0">
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6">
-                KDUAH & DAVID <span className="text-orange-500">CONSULT</span> LIMITED
+                KDUAH & DAVIDS <span className="text-orange-500">CONSULT</span> LIMITED
               </h1>
               <p className="text-xl text-blue-100 mb-8">
                 Comprehensive consulting services to help your business thrive in today's competitive market.

@@ -52,13 +52,13 @@ export const projects = [
     },
     {
       name: "Juliet's Kitchen Logo",
-      location: 'Ghana',
+      location: 'USA',
       image: juliet,
       type: "logo",
     },
     {
       name: "The Family's Kitchen Logo",
-      location: 'Ghana',
+      location: 'USA',
       image: family,
       type: "logo",
     },
@@ -94,7 +94,7 @@ export const projects = [
     },
     {
       name: "The Family's Kitchen",
-      location: 'Ghana',
+      location: 'USA',
       image: family,
       type: "consultation",
     },

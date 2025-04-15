@@ -9,13 +9,13 @@ import obeng from '../assets/obeng.png';
 
 export const teamMembers = [
   {
-    name: "KWAKU DUAH HUNIOR",
+    name: "KWAKU DUAH JUNIOR",
     role: "Chief Executive Officer",
     description: "Leads the firm with strategic vision and operational excellence.",
     image: ceo
   },
   {
-    name: "DAVID ODURO BOAMA",
+    name: "DAVID BOAMAH-ODURO",
     role: "Managing Partner - Accounting & Audit",
     description: "Responsible for audit operations and financial analysis.",
     image: oduro
@@ -45,7 +45,7 @@ export const teamMembers = [
     image: doris
   },
   {
-    name: "OBENG KYE BAFFOUR",
+    name: "OBENG KYEI BAFFOUR",
     role: "Event Manager",
     description: "Coordinates corporate events and ensures successful execution.",
     image: obeng

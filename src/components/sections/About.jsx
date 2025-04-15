@@ -17,7 +17,7 @@ const AboutSection = () => {
       <div className="container mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4">About KDUAH & DAVID Consult</h2>
+          <h2 className="text-4xl md:text-5xl font-bold text-blue-800 mb-4">About KDUAH & DAVIDS Consult</h2>
           <div className="w-24 h-1 bg-orange-500 mx-auto mb-6"></div>
         </div>
 
