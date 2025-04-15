@@ -26,7 +26,7 @@ const boardOfDirectors = [
     `
   },
   {
-    name: "KWAKU DUAH HUNIOR",
+    name: "KWAKU DUAH JUNIOR",
     role: "Chief Executive Officer",
     experience: `
       Kwaku Duah Jnr. holds a Bachelor of Science in Accounting from Pentecost University, a Higher National Diploma in Accounting from Sunyani Technical University, 
