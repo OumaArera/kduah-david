@@ -40,10 +40,10 @@ const ContactSection = () => {
         </div>
 
         <div className="grid lg:grid-cols-2 gap-8 bg-white rounded-2xl shadow-2xl overflow-hidden">
-          {/* Contact Form - Fixed padding and overflow */}
+          {/* Contact Form - Improved responsiveness */}
           <div className="w-full p-4 sm:p-6 md:p-8">
-            <h3 className="text-2xl font-semibold text-blue-800 mb-6">Send Us a Message</h3>
-            <form className="space-y-4" onSubmit={handleSubmit}>
+            <h3 className="text-2xl font-semibold text-blue-800 mb-4 sm:mb-6">Send Us a Message</h3>
+            <form className="space-y-3 sm:space-y-4" onSubmit={handleSubmit}>
               {[
                 { id: "name", label: "Full Name", type: "text", placeholder: "Your name" },
                 { id: "email", label: "Email Address", type: "email", placeholder: "Your email" },
@@ -58,7 +58,7 @@ const ContactSection = () => {
                     id={field.id}
                     name={field.id}
                     placeholder={field.placeholder}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                    className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                     onChange={handleChange}
                     value={formData[field.id]}
                   />
@@ -74,7 +74,7 @@ const ContactSection = () => {
                   name="message"
                   rows={4}
                   placeholder="Your message"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
+                  className="w-full px-3 py-2 border border-gray-300 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
                   onChange={handleChange}
                   value={formData.message}
                 ></textarea>
@@ -82,55 +82,55 @@ const ContactSection = () => {
 
               <button
                 type="submit"
-                className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 rounded-md transition duration-300"
+                className="w-full bg-orange-500 hover:bg-orange-600 text-white font-semibold py-2 sm:py-3 rounded-md transition duration-300"
               >
                 Send Message
               </button>
             </form>
           </div>
 
-          {/* Contact Details - Improved spacing */}
-          <div className="bg-blue-800 text-white p-6 md:p-8 flex flex-col items-center justify-between text-center">
-            <div className="w-full max-w-md">
-              <h3 className="text-2xl font-semibold mb-6 text-center">Contact Information</h3>
-              <ul className="space-y-6">
-                <li className="flex items-start space-x-4 text-left">
-                  <div className="pt-1">
-                    <MapPin className="text-orange-400" size={24} />
+          {/* Contact Details - Fixed centering */}
+          <div className="bg-blue-800 text-white p-4 sm:p-6 md:p-8 flex flex-col justify-between">
+            <div className="mx-auto w-full">
+              <h3 className="text-2xl font-semibold mb-4 sm:mb-6 text-center">Contact Information</h3>
+              <ul className="space-y-4 sm:space-y-6 max-w-md mx-auto">
+                <li className="flex items-start space-x-3">
+                  <div className="pt-1 flex-shrink-0">
+                    <MapPin className="text-orange-400" size={22} />
                   </div>
                   <div>
                     <h4 className="font-medium mb-1">Our Location</h4>
-                    <p className="text-blue-100">H/N 33, Tower School - Gbawe</p>
-                    <p className="text-blue-100">Digital Address - GS -0047-3214</p>
-                    <p className="text-blue-100">Accra - Ghana</p>
+                    <p className="text-blue-100 text-sm sm:text-base">H/N 33, Tower School - Gbawe</p>
+                    <p className="text-blue-100 text-sm sm:text-base">Digital Address - GS -0047-3214</p>
+                    <p className="text-blue-100 text-sm sm:text-base">Accra - Ghana</p>
                   </div>
                 </li>
-                <li className="flex items-start space-x-4 text-left">
-                  <div className="pt-1">
-                    <Phone className="text-orange-400" size={24} />
+                <li className="flex items-start space-x-3">
+                  <div className="pt-1 flex-shrink-0">
+                    <Phone className="text-orange-400" size={22} />
                   </div>
                   <div>
                     <h4 className="font-medium mb-1">Telephone</h4>
-                    <p className="text-blue-100">+233 240569889</p>
-                    <p className="text-blue-100">+233 249099740</p>
-                    <p className="text-blue-100">+1 3257030636</p>
+                    <p className="text-blue-100 text-sm sm:text-base">+233 240569889</p>
+                    <p className="text-blue-100 text-sm sm:text-base">+233 249099740</p>
+                    <p className="text-blue-100 text-sm sm:text-base">+1 3257030636</p>
                   </div>
                 </li>
-                <li className="flex items-start space-x-4 text-left">
-                  <div className="pt-1">
-                    <Mail className="text-orange-400" size={24} />
+                <li className="flex items-start space-x-3">
+                  <div className="pt-1 flex-shrink-0">
+                    <Mail className="text-orange-400" size={22} />
                   </div>
                   <div>
                     <h4 className="font-medium mb-1">Email</h4>
-                    <p className="text-blue-100">k2dduahconsult2025@gmail.com</p>
+                    <p className="text-blue-100 text-sm sm:text-base">k2dduahconsult2025@gmail.com</p>
                   </div>
                 </li>
               </ul>
             </div>
 
-            <div className="w-full max-w-md mt-8 border-t border-blue-700 pt-4 text-center">
-              <h4 className="font-medium mb-3">Business Hours</h4>
-              <div className="text-blue-100 space-y-1">
+            <div className="w-full max-w-md mx-auto mt-6 border-t border-blue-700 pt-4 text-center">
+              <h4 className="font-medium mb-2 sm:mb-3">Business Hours</h4>
+              <div className="text-blue-100 space-y-1 text-sm sm:text-base">
                 <p>Mon – Fri: 9:00 AM – 5:00 PM</p>
                 <p>Saturday: 10:00 AM – 2:00 PM</p>
                 <p>Sunday: Closed</p>

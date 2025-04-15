@@ -18,7 +18,7 @@ export default function KduahConsultLandingPage() {
   
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'services', 'projects', 'team', 'contact'];
+      const sections = ['home', 'about', 'services', 'clients', 'team', 'contact'];
       const scrollPosition = window.scrollY + 100;
       
       for (const section of sections) {

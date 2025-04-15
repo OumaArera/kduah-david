@@ -26,7 +26,7 @@ const Header = ({ activeSection, setActiveSection }) => {
       }
       
       // Update active section
-      const sections = ['home', 'about', 'services', 'projects', 'team', 'contact'];
+      const sections = ['home', 'about', 'services', 'clients', 'team', 'contact'];
       const scrollPosition = window.scrollY + 100;
 
       for (const section of sections) {
@@ -63,7 +63,7 @@ const Header = ({ activeSection, setActiveSection }) => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center">
             <div className="flex space-x-1 bg-gray-100 px-2 py-1 rounded-full">
-              {['home', 'about', 'services', 'projects', 'team', 'contact'].map((item) => (
+              {['home', 'about', 'services', 'clients', 'team', 'contact'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
@@ -105,7 +105,7 @@ const Header = ({ activeSection, setActiveSection }) => {
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t border-gray-100 px-6 pt-2 pb-4 shadow-inner">
           <div className="flex flex-col space-y-1">
-            {['home', 'about', 'services', 'projects', 'team', 'contact'].map((item) => (
+            {['home', 'about', 'services', 'clients', 'team', 'contact'].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item)}
