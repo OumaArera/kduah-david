@@ -79,7 +79,7 @@ export default function KduahConsultLandingPage() {
               </div>
             </div>
             <div className="w-full md:w-1/2 flex justify-center">
-              <img src={business} alt="Business Consulting" className="max-w-full h-160 rounded-lg shadow-xl" />
+              <img src={business} alt="Business Consulting" className="max-w-full h-96 md:h-160 rounded-lg shadow-xl" />
             </div>
           </div>
         </div>

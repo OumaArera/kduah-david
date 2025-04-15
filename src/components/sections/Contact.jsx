@@ -89,54 +89,58 @@ const ContactSection = () => {
             </form>
           </div>
 
-          {/* Contact Details - Fixed centering */}
-          <div className="bg-blue-800 text-white p-4 sm:p-6 md:p-8 flex flex-col justify-between">
-            <div className="mx-auto w-full">
-              <h3 className="text-2xl font-semibold mb-4 sm:mb-6 text-center">Contact Information</h3>
-              <ul className="space-y-4 sm:space-y-6 max-w-md mx-auto">
-                <li className="flex items-start space-x-3">
-                  <div className="pt-1 flex-shrink-0">
-                    <MapPin className="text-orange-400" size={22} />
-                  </div>
-                  <div>
-                    <h4 className="font-medium mb-1">Our Location</h4>
-                    <p className="text-blue-100 text-sm sm:text-base">H/N 33, Tower School - Gbawe</p>
-                    <p className="text-blue-100 text-sm sm:text-base">Digital Address - GS -0047-3214</p>
-                    <p className="text-blue-100 text-sm sm:text-base">Accra - Ghana</p>
-                  </div>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <div className="pt-1 flex-shrink-0">
-                    <Phone className="text-orange-400" size={22} />
-                  </div>
-                  <div>
-                    <h4 className="font-medium mb-1">Telephone</h4>
-                    <p className="text-blue-100 text-sm sm:text-base">+233 240569889</p>
-                    <p className="text-blue-100 text-sm sm:text-base">+233 249099740</p>
-                    <p className="text-blue-100 text-sm sm:text-base">+1 3257030636</p>
-                  </div>
-                </li>
-                <li className="flex items-start space-x-3">
-                  <div className="pt-1 flex-shrink-0">
-                    <Mail className="text-orange-400" size={22} />
-                  </div>
-                  <div>
-                    <h4 className="font-medium mb-1">Email</h4>
-                    <p className="text-blue-100 text-sm sm:text-base">k2dduahconsult2025@gmail.com</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-
-            <div className="w-full max-w-md mx-auto mt-6 border-t border-blue-700 pt-4 text-center">
-              <h4 className="font-medium mb-2 sm:mb-3">Business Hours</h4>
-              <div className="text-blue-100 space-y-1 text-sm sm:text-base">
-                <p>Mon – Fri: 9:00 AM – 5:00 PM</p>
-                <p>Saturday: 10:00 AM – 2:00 PM</p>
-                <p>Sunday: Closed</p>
-              </div>
-            </div>
+          {/* Contact Details - Icons as section titles */}
+<div className="bg-blue-800 text-white p-4 sm:p-6 md:p-8 flex flex-col justify-between">
+  <div className="mx-auto w-full">
+    <h3 className="text-2xl font-semibold mb-4 sm:mb-6 text-center">Contact Information</h3>
+    <ul className="space-y-8 max-w-md mx-auto">
+      {[
+        {
+          icon: <MapPin size={32} className="text-orange-400 mx-auto mb-2" />,
+          content: [
+            "H/N 33, Tower School - Gbawe",
+            "Digital Address - GS -0047-3214",
+            "Accra - Ghana"
+          ]
+        },
+        {
+          icon: <Phone size={32} className="text-orange-400 mx-auto mb-2" />,
+          content: [
+            "+233 240569889",
+            "+233 249099740",
+            "+1 3257030636"
+          ]
+        },
+        {
+          icon: <Mail size={32} className="text-orange-400 mx-auto mb-2" />,
+          content: [
+            "k2dduahconsult2025@gmail.com"
+          ]
+        }
+      ].map((item, index) => (
+        <li key={index} className="flex flex-col items-center text-center">
+          {item.icon}
+          <div className="space-y-1">
+            {item.content.map((line, idx) => (
+              <p key={idx} className="text-blue-100 text-sm sm:text-base">{line}</p>
+            ))}
           </div>
+        </li>
+      ))}
+    </ul>
+  </div>
+
+  <div className="w-full max-w-md mx-auto mt-8 border-t border-blue-700 pt-4 text-center">
+    <h4 className="font-medium mb-2 sm:mb-3">Business Hours</h4>
+    <div className="text-blue-100 space-y-1 text-sm sm:text-base">
+      <p>Mon – Fri: 9:00 AM – 5:00 PM</p>
+      <p>Saturday: 10:00 AM – 2:00 PM</p>
+      <p>Sunday: Closed</p>
+    </div>
+  </div>
+</div>
+
+
         </div>
       </div>
     </section>

@@ -56,7 +56,7 @@ const Header = ({ activeSection, setActiveSection }) => {
             <img
               src={logo}
               alt="KDUAH Consult Logo"
-              className="h-14 w-auto object-contain"
+              className="h-16 md:h-24 w-auto object-contain"
             />
           </div>
 

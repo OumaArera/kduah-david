@@ -13,10 +13,10 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
           {/* Left Column: Logo */}
           <div className="flex justify-center md:justify-start">
-            <img
+          <img
               src={logo}
               alt="KDUAH Consult Logo"
-              className="h-20 w-auto object-contain"
+              className="h-36 w-auto object-contain bg-white p-2 rounded-lg shadow-md"
             />
           </div>
           
