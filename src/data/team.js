@@ -1,10 +1,10 @@
-import CEO from '../assets/CEO.jpeg';
-import ceo from '../assets/ceo_photo.jpeg';
+import CEO from '../assets/CEO.png';
+import ceo from '../assets/ceo_photo.png';
 import oduro from '../assets/david_oduro.jpeg';
-import gomado from '../assets/david_gomado.jpeg';
-import ernestina from '../assets/ernestina_photo.jpeg';
-import doris from '../assets/doris_photo.jpeg';
-import obeng from '../assets/obeng.jpeg';
+import gomado from '../assets/david_gomado.png';
+import ernestina from '../assets/ernestina.png';
+import doris from '../assets/doris_photo.png';
+import obeng from '../assets/obeng.png';
 
 
 export const teamMembers = [

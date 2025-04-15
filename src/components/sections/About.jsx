@@ -1,5 +1,5 @@
 import React from 'react';
-import ceo from '../../assets/ceo.jpeg';
+import ceo from '../../assets/ceo.png';
 import visionImg from '../../assets/vision.jpg';
 import missionImg from '../../assets/mission.jpg';
 
