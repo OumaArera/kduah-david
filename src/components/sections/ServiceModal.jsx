@@ -11,7 +11,7 @@ import {
 } from 'react-icons/fa';
 
 const iconMap = {
-  "Paralegal Service - Barimah Chambers": <FaBalanceScale />,
+  "Paralegal Services - Barimah Chambers": <FaBalanceScale />,
   "Event Planning and Management": <FaCalendarAlt />,
   "Business Development Services": <FaChartLine />,
   "Accounting and Audit": <FaCalculator />,

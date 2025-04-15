@@ -1,6 +1,6 @@
 export const subServices =[
     {
-        serviceName: "Paralegal Service - Barimah Chambers",
+        serviceName: "Paralegal Services - Barimah Chambers",
         subServices: [
             {service: "Administering Oaths and Affirmations", icon: null},
             {service: "Affidavits and Statutory Declarations", icon: null},

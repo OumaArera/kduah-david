@@ -27,7 +27,7 @@ export const services = [
     },
     { 
       icon: paralegal, 
-      title: "Paralegal Service - Barimah Chambers", 
+      title: "Paralegal Services - Barimah Chambers", 
       description: "Legal assistance and documentation support for your business needs." 
     },
   ];
