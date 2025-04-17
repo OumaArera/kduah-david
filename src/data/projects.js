@@ -17,6 +17,18 @@ import lampUp from '../assets/lamp_up_event.jpeg';
 import won from '../assets/won_event.jpeg';
 import marti from '../assets/marti_construction.jpeg';
 import kendec from '../assets/kendec_construction.jpeg';
+import proj1 from '../assets/complete_proj_1.jpeg';
+import proj2 from '../assets/complete_proj_2.jpeg';
+import proj3 from '../assets/complete_proj_3.jpeg';
+import proj4 from '../assets/complete_proj_4.jpeg';
+import proj5 from '../assets/complete_proj_5.jpeg';
+import proj6 from '../assets/complete_proj_6.jpeg';
+import proj7 from '../assets/complete_proj_7.jpeg';
+import proj8 from '../assets/complete_proj_8.jpeg';
+import proj9 from '../assets/complete_proj_9.jpeg';
+import proj10 from '../assets/complete_proj_10.jpeg';
+import proj11 from '../assets/complete_proj_11.jpeg';
+import fm_logo from '../assets/fm_logo.jpeg';
 
 
 export const projects = [
@@ -24,6 +36,12 @@ export const projects = [
       name: 'KDUAH Transport',
       location: 'Ghana',
       image: logo,
+      type: "logo",
+    },
+    {
+      name: 'FM Events & Catering Services',
+      location: 'Ghana',
+      image: fm_logo,
       type: "logo",
     },
     {
@@ -145,6 +163,72 @@ export const projects = [
       location: 'Ghana',
       image: kendec,
       type: "partner",
+    },
+    {
+      name: "Completed residential house ,designed and built",
+      location: 'Weija -Accra, Ghana',
+      image: proj1,
+      type: "construction",
+    },
+    {
+      name: "Completed apartment",
+      location: 'Tema Comm. 25, Ghana',
+      image: proj2,
+      type: "construction",
+    },
+    {
+      name: "Swimming pool construction",
+      location: 'Amasaman, Ghana',
+      image: proj3,
+      type: "construction",
+    },
+    {
+      name: "Complete Construction of Apartment",
+      location: 'Lashibi -Accra, Ghana',
+      image: proj4,
+      type: "construction",
+    },
+    {
+      name: "Footing installed",
+      location: 'Damfa, Ghana',
+      image: proj6,
+      type: "construction",
+    },
+    {
+      name: "Ongoing plastering & Finishing works for Tema Development Cooperation, TDC Apartment",
+      location: 'Tema Comm. 25, Ghana',
+      image: proj11,
+      type: "construction",
+    },
+    {
+      name: "Residential apartment construction",
+      location: 'Ablekuma-Amamorley- Accra, Ghana',
+      image: proj10,
+      type: "construction",
+    },
+    {
+      name: "ICGC Project",
+      location: 'New Weija, Ghana',
+      image: proj9,
+      type: "construction",
+    },
+    {
+      name: "Residential House Construction",
+      location: 'Lakeside-Accra, Ghana',
+      image: proj8,
+      type: "construction",
+    },
+    {
+      name: "Casting of first floor Reinforced Concrete slab",
+      location: 'Gbawe-Accra, Ghana',
+      image: proj7,
+      type: "construction",
+    },
+    {
+      name: "Four bedroom apartment",
+      location: 'Gbawe-new Weija, Ghana',
+      image: proj5,
+      type: "construction",
     },
     
   ];

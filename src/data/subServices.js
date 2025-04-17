@@ -7,8 +7,22 @@ export const subServices =[
                 "details": "Barimah Chambers provides authorized commissioners to administer oaths and affirmations, ensuring proper verification and authentication of documents."
             },
             {
-                "service": "Affidavits and Statutory Declarations", 
-                "details": "We assist with swearing affidavits for various purposes, including name changes, nationality identity attestation, power of attorney, and more."
+                "service": "Affidavits and Statutory Declarations",
+                "details": "We assist with swearing affidavits for various purposes, including name changes, nationality identity attestation, power of attorney, and more.",
+                "bulletPoints": [
+                  "Change of Name",
+                  "Correction of Name",
+                  "Correction of Date of Birth",
+                  "Change of Place of Birth",
+                  "Affirmation of birth",
+                  "Nationality identity Attestation",
+                  "School Sponsorship Affidavits",
+                  "Letter of Administration",
+                  "Power of Attorney",
+                  "Indentures",
+                  "Tenancy Agreement",
+                  "Missing Documents"
+                ]
             },
             {
                 "service": "Document Verification", 
@@ -23,8 +37,15 @@ export const subServices =[
                 "details": "We provide notarization services, ensuring that documents are executed correctly and officially authenticated."
             },
             {
-                "service": "Deeds", 
-                "details": "Barimah Chambers handles various types of deeds including gift, transfer, donation, conveyance, and assignment deeds, ensuring legal validity."
+                "service": "Deeds",
+                "details": "Barimah Chambers handles various types of deeds including gift, transfer, donation, conveyance, and assignment deeds, ensuring legal validity.",
+                "bulletPoints": [
+                  "Deed of Gift",
+                  "Deed of Transfer", 
+                  "Deed of Donation",
+                  "Deed of Conveyance",
+                  "Deed of Assignment"
+                ]
             },
             {
                 "service": "Gazette of Documents", 
