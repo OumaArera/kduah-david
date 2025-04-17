@@ -82,11 +82,12 @@ const ProjectsSection = () => {
   const filterOptions = [
     { value: 'all', label: 'All Projects' },
     { value: 'partner', label: 'Partners' },
-    { value: 'event', label: 'Events Planning and Management' },
-    { value: 'consultation', label: 'Consultancy Services' },
+    { value: 'event', label: 'Event Planning and Management' },
+    { value: 'consultation', label: 'Business Consultancy Services' },
     { value: 'logo', label: 'Logo Design' },
     { value: 'architecture', label: 'Architectural Design' },
-    { value: 'construction', label: 'Building Construction and Civil Works' }
+    { value: 'construction', label: 'Building Construction and Civil Works' },
+    { value: 'accounting', label: 'Accounting & Audit Services' },
   ];
 
   return (
@@ -96,7 +97,7 @@ const ProjectsSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-4">Our Clients</h2>
           <div className="w-24 h-1 bg-orange-500 mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            A showcase of our successfully completed projects for our clients across Ghana, and USA delivering excellence and impact in every field.
+            At KDuah & Davids Consult, we create and deliver business and innovative solutions that fit our clients needs and drive the result they want. This is so because our clients are at the heart of everything we do. We serve a wide range of industries with unwavering commitment and expertise.
           </p>
         </div>
 
