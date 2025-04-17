@@ -17,7 +17,7 @@ const ServicesSection = () => {
     <section id="services" className="py-20 bg-gray-50 relative z-10">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-blue-800">Our Services</h2>
+          <h2 className="text-4xl font-bold text-blue-800">Consortium of Services</h2>
           <div className="w-24 h-1 bg-orange-500 mx-auto my-4" />
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             Tailored strategies designed to empower your business growth and operational excellence.

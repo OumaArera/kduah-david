@@ -51,33 +51,32 @@ const Header = ({ activeSection, setActiveSection }) => {
     <header className={`fixed top-0 w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white/95 backdrop-blur-sm shadow-md py-1' : 'bg-white py-2'}`}>
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex justify-between items-center">
-          {/* Logo */}
-          <div className="flex items-center">
-            <img
-              src={logo}
-              alt="KDUAH Consult Logo"
-              className="h-16 md:h-24 w-auto object-contain"
-            />
+        <div className="flex items-center space-x-8">
+            {/* Logo */}
+            <div className="flex-shrink-0">
+              <img src={logo} alt="KDUAH Consult Logo" className="h-16 md:h-36 w-auto object-contain" />
+            </div>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center">
+              <div className="flex space-x-1 bg-gray-100 px-2 py-1 rounded-full">
+                {['home', 'about', 'services', 'clients', 'team'].map((item) => (
+                  <button
+                    key={item}
+                    onClick={() => scrollToSection(item)}
+                    className={`px-4 py-2 rounded-full transition-all duration-300 text-sm font-medium ${
+                      activeSection === item
+                        ? 'bg-blue-800 text-white shadow-md'
+                        : 'text-blue-800 hover:bg-gray-200'
+                    }`}
+                  >
+                    {item.charAt(0).toUpperCase() + item.slice(1)}
+                  </button>
+                ))}
+              </div>
+            </nav>
           </div>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center">
-            <div className="flex space-x-1 bg-gray-100 px-2 py-1 rounded-full">
-              {['home', 'about', 'services', 'clients', 'team'].map((item) => (
-                <button
-                  key={item}
-                  onClick={() => scrollToSection(item)}
-                  className={`px-4 py-2 rounded-full transition-all duration-300 text-sm font-medium ${
-                    activeSection === item
-                      ? 'bg-blue-800 text-white shadow-md'
-                      : 'text-blue-800 hover:bg-gray-200'
-                  }`}
-                >
-                  {item.charAt(0).toUpperCase() + item.slice(1)}
-                </button>
-              ))}
-            </div>
-          </nav>
 
           {/* Mobile Menu Toggle */}
           <div className="md:hidden flex items-center">
