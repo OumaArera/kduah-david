@@ -9,10 +9,9 @@ const ProjectsSection = () => {
   const sliderRef = useRef(null);
   const autoPlayRef = useRef(null);
 
-  // Check if it's mobile view
   useEffect(() => {
     const checkIfMobile = () => {
-      setIsMobile(window.innerWidth < 640); // sm breakpoint in Tailwind
+      setIsMobile(window.innerWidth < 640);
     };
     
     checkIfMobile();
@@ -23,7 +22,6 @@ const ProjectsSection = () => {
     };
   }, []);
 
-  // Apply filter
   useEffect(() => {
     if (activeFilter === 'all') {
       setFilteredProjects(projects);
@@ -33,11 +31,8 @@ const ProjectsSection = () => {
     setCurrentSlide(0);
   }, [activeFilter]);
 
-  // Auto-slide functionality
   useEffect(() => {
     const autoPlay = () => {
-      // For mobile: check if we have more than 1 project
-      // For desktop: check if we have more than 3 projects
       if ((isMobile && filteredProjects.length <= 1) || 
           (!isMobile && filteredProjects.length <= 3)) return;
       
@@ -62,9 +57,7 @@ const ProjectsSection = () => {
     return () => clearInterval(interval);
   }, []);
 
-  // Handle manual navigation
   const goToSlide = (index) => {
-    // Calculate max slide differently for mobile vs desktop
     const maxSlide = isMobile 
       ? Math.max(0, filteredProjects.length - 1)
       : Math.max(0, filteredProjects.length - 3);
@@ -78,7 +71,6 @@ const ProjectsSection = () => {
     }
   };
 
-  // Filter options
   const filterOptions = [
     { value: 'all', label: 'All Projects' },
     { value: 'partner', label: 'Partners' },
@@ -89,19 +81,95 @@ const ProjectsSection = () => {
     { value: 'construction', label: 'Building Construction and Civil Works' },
     { value: 'accounting', label: 'Accounting & Audit Services' },
   ];
+  
+  // Function to handle image carousel for each project card
+  const ProjectImageCarousel = ({ images, name }) => {
+    const [activeImage, setActiveImage] = useState(0);
+    
+    useEffect(() => {
+      const imageInterval = setInterval(() => {
+        setActiveImage(prev => (prev + 1) % images.length);
+      }, 3000);
+      
+      return () => clearInterval(imageInterval);
+    }, [images.length]);
+    
+    return (
+      <div className="relative h-56 overflow-hidden group">
+        <div className="absolute top-0 left-0 w-full h-full flex transition-transform duration-500 ease-in-out"
+             style={{ transform: `translateX(-${activeImage * 100}%)` }}>
+          {images.map((image, idx) => (
+            <img
+              key={idx}
+              src={image}
+              alt={`${name} - Image ${idx + 1}`}
+              className="w-full h-56 object-cover flex-shrink-0"
+            />
+          ))}
+        </div>
+        
+        {/* Image indicators */}
+        {images.length > 1 && (
+          <div className="absolute bottom-2 left-0 right-0 flex justify-center gap-2">
+            {images.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  setActiveImage(idx);
+                }}
+                className={`w-2 h-2 rounded-full transition-colors ${
+                  activeImage === idx ? 'bg-blue-800' : 'bg-white bg-opacity-70'
+                }`}
+                aria-label={`Go to image ${idx + 1}`}
+              />
+            ))}
+          </div>
+        )}
+        
+        {/* Left/Right Controls (visible on hover) */}
+        {images.length > 1 && (
+          <>
+            <button 
+              className="absolute left-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-30 text-white rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity"
+              onClick={(e) => {
+                e.stopPropagation();
+                setActiveImage(prev => (prev - 1 + images.length) % images.length);
+              }}
+              aria-label="Previous image"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button 
+              className="absolute right-2 top-1/2 -translate-y-1/2 bg-black bg-opacity-30 text-white rounded-full p-1 opacity-0 group-hover:opacity-100 transition-opacity"
+              onClick={(e) => {
+                e.stopPropagation();
+                setActiveImage(prev => (prev + 1) % images.length);
+              }}
+              aria-label="Next image"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </>
+        )}
+      </div>
+    );
+  };
 
   return (
     <section id="clients" className="py-20 bg-gray-50 relative">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-bold text-blue-800 mb-4">Our Clients</h2>
-          <div className="w-24 h-1 bg-orange-500 mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-2xl mx-auto">
             At KDuah & Davids Consult, we create and deliver business and innovative solutions that fit our clients needs and drive the result they want. This is so because our clients are at the heart of everything we do. We serve a wide range of industries with unwavering commitment and expertise.
           </p>
         </div>
 
-        {/* Filter Buttons */}
         <div className="flex flex-wrap justify-center gap-2 mb-8">
           {filterOptions.map((option) => (
             <button
@@ -118,9 +186,7 @@ const ProjectsSection = () => {
           ))}
         </div>
 
-        {/* Projects Slider */}
         <div className="relative">
-          {/* Navigation Arrows */}
           <button 
             onClick={() => goToSlide(currentSlide - 1)}
             className="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 z-10 bg-white rounded-full p-2 shadow-md hover:bg-gray-100"
@@ -141,7 +207,6 @@ const ProjectsSection = () => {
             </svg>
           </button>
 
-          {/* Projects Container */}
           <div 
             ref={sliderRef}
             className="overflow-hidden"
@@ -161,15 +226,9 @@ const ProjectsSection = () => {
                     className="min-w-full sm:min-w-[50%] md:min-w-[33.333%] px-4"
                   >
                     <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition duration-300 h-full">
-                      <div className="relative h-56">
-                        <img
-                          src={project.image}
-                          alt={project.name}
-                          className="w-full h-full object-cover"
-                        />
-                        <div className="absolute top-2 right-2 bg-blue-800 text-white text-xs px-2 py-1 rounded-full">
-                          {project.type.charAt(0).toUpperCase() + project.type.slice(1)}
-                        </div>
+                      <ProjectImageCarousel images={project.image} name={project.name} />
+                      <div className="absolute top-2 right-2 bg-blue-800 text-white text-xs px-2 py-1 rounded-full">
+                        {project.type.charAt(0).toUpperCase() + project.type.slice(1)}
                       </div>
                       <div className="p-4">
                         <h3 className="text-xl font-semibold text-blue-800 mb-1">{project.name}</h3>
@@ -186,7 +245,6 @@ const ProjectsSection = () => {
             )}
           </div>
 
-          {/* Pagination Dots - Adjusted for mobile/desktop */}
           {((isMobile && filteredProjects.length > 1) || 
             (!isMobile && filteredProjects.length > 3)) && (
             <div className="flex justify-center mt-6 gap-2">
