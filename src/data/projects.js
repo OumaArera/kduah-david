@@ -52,6 +52,12 @@ export const projects = [
       type: "logo",
     },
     {
+      name: 'FM Events & Catering Services',
+      location: 'Ghana',
+      image: [fm_logo],
+      type: "partner",
+    },
+    {
       name: 'Architectural Design and Planning',
       location: 'Ghana',
       image: [arch, arch1, arch2, arch3, arch4, arch5, arch6, arch7],
@@ -68,6 +74,24 @@ export const projects = [
       location: 'Ghana',
       image: [nixol],
       type: "logo",
+    },
+    {
+      name: 'Nixol Limited',
+      location: 'Ghana',
+      image: [nixol],
+      type: "accounting",
+    },
+    {
+      name: 'KDUAH Transport',
+      location: 'Ghana',
+      image: [logo],
+      type: "accounting",
+    },
+    {
+      name: 'MFC Logo',
+      location: 'Ghana',
+      image: [mfcLogo],
+      type: "accounting",
     },
     {
       name: 'Barimah Chambers Logo',
@@ -115,13 +139,19 @@ export const projects = [
       name: "Cakes By Nak",
       location: 'Ghana',
       image: [nak],
-      type: "consultation",
+      type: "accounting",
     },
     {
       name: "The Family's Kitchen",
       location: 'USA',
       image: [family],
-      type: "consultation",
+      type: "accounting",
+    },
+    {
+      name: "KDUAH Group of Companies",
+      location: 'Ghana',
+      image: [kduah_group],
+      type: "accounting",
     },
     {
       name: "Hemaagroove",
